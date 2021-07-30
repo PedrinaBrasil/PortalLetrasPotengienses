@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+        <title>{% block title %}{% endblock %}</title>
+        <link href="{% static 'css/blog.css' %}" rel="stylesheet"/>
+    </head>
+    <body>
+        <header>
+            <small> <a href="{% url 'admin:index' %}">Admin</a>
+        </header>
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+    </body>
+</html>
