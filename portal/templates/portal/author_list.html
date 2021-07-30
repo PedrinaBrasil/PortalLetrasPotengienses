@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %} Meu Blog {% endblock %}
+
+{% block content %}
+    <section>
+    {% for a in author_list %}
+        <article>
+            <h2>
+                <a href="{{ a.get_absolute_url }}">
+                    {{a.citation}}
+                </a>
+            </h2>
+            <section>
+                <img src="/media/{{a.photo}}"/>
+
+            </section>
+            <section class="info">
+                <p class="nome">
+                     {{a.name}} {{a.surname}}
+                </p>
+                {{a.bio|linebreaks|truncatewords:50}}
+            </section>
+        </article>
+    {% endfor %}    
+    </section>
+{% endblock %}

@@ -14,5 +14,8 @@ class AuthorsListView(ListView):
 class BooksListView(ListView):
     model = Book
 
-'''class PostDetailView(DetailView):
-    model = Post'''
+class AuthorDetailView(DetailView):
+    model = Author
+
+class BookDetailView(DetailView):
+    model = Book
