@@ -8,7 +8,9 @@
     </head>
     <body>
         <header>
-            <small> <a href="{% url 'admin:index' %}">Admin</a>
+            <small> <a href="{% url 'admin:index' %}">Admin</a></small>
+            <small> <a href="{% url 'portal:autores' %}">Autores</a></small>
+            <small> <a href="{% url 'portal:obras' %}">Obras</a></small>
         </header>
         <main>
             {% block content %}
